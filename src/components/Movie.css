@@ -32,6 +32,11 @@
   margin: 0;
   font-weight: 300;
 }
+.movie .movie__rating {
+  margin: 0;
+  font-weight: 300;
+}
+
 
 .movie .movie__title {
   margin-bottom: 5px;

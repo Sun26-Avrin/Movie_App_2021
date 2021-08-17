@@ -17,6 +17,7 @@ class Detail extends React.Component {
           <div className="movie__data">
             <h3 className="movie__title">{location.state.title}</h3>
             <h5 className="movie__year">{location.state.year}</h5>
+            <h5 className="movie__rating">평점 : {location.state.rating}</h5>
             <ul className="movie__genres">
               {location.state.genres.map((genre, index) => (
                 <li key={index} className="genres__genre">
