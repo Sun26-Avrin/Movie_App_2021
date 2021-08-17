@@ -3,6 +3,7 @@ import "./Detail.css";
 
 class Detail extends React.Component {
   componentDidMount() {
+    //console.log(this.props);
     const { location, history } = this.props;
     if (location.state === undefined) {
       history.push("/");
@@ -12,20 +13,22 @@ class Detail extends React.Component {
     const { location } = this.props;
     if (location.state) {
       return (
-        <div className="movie">
-          <img src={location.state.poster} alt={location.state.title} title={location.state.title} />
-          <div className="movie__data">
-            <h3 className="movie__title">{location.state.title}</h3>
-            <h5 className="movie__year">{location.state.year}</h5>
-            <h5 className="movie__rating">평점 : {location.state.rating}</h5>
-            <ul className="movie__genres">
-              {location.state.genres.map((genre, index) => (
-                <li key={index} className="genres__genre">
-                  {genre}
-                </li>
-              ))}
-            </ul>
-            <p className="movie__summary">{location.state.summary}</p>
+        <div className="mother">
+          <div className="movie">
+            <img src={location.state.poster} alt={location.state.title} title={location.state.title} />
+            <div className="movie__data">
+              <h3 className="movie__title">{location.state.title}</h3>
+              <h5 className="movie__year">{location.state.year}</h5>
+              <h5 className="movie__rating">평점 : {location.state.rating}</h5>
+              <ul className="movie__genres">
+                {location.state.genres.map((genre, index) => (
+                  <li key={index} className="genres__genre">
+                    {genre}
+                  </li>
+                ))}
+              </ul>
+              <p className="movie__summary">{location.state.summary}</p>
+            </div>
           </div>
         </div>
       );
