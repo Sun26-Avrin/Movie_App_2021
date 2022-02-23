@@ -1,0 +1,19 @@
+before_script:
+  - "cd pocketmark_frontend"
+cache:
+  directories:
+    - node_modules
+language: node_js
+script: "npm run build"
+    
+
+
+branches:
+  only:
+    - master
+    
+notifications:
+  email:
+    recipients:
+      - sim2626@naver.com
+sudo: required
