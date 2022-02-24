@@ -17,3 +17,4 @@ notifications:
     recipients:
       - sim2626@naver.com
 sudo: required
+
