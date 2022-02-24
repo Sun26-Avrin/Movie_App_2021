@@ -1,5 +1,5 @@
 before_script:
-  - "cd pocketmark_frontend"
+  - "npm ci react-scripts"
 cache:
   directories:
     - node_modules
@@ -13,8 +13,6 @@ branches:
     - master
     
 notifications:
-  email:
-    recipients:
-      - sim2626@naver.com
+  email: false
 sudo: required
 
